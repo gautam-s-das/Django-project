@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Text Utils</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            button{
+                margin: 10px;
+                padding: 10px;
+                font-size: 20px;
+                font-family: monospace;
+                background: lightskyblue;
+                border-color: lightskyblue;
+                cursor:pointer;
+            }
+        </style>
+        {% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> {% endcomment %}
+    </head>
+    <body>
+        <h1>Text Analyzer Edit Your Text Here</h1>
+        <form action='/analyze' method='get'>
+            <textarea name='text' style="width: 1421px;height: 142px;font-size: 20px;"></textarea><br>
+            <input type="checkbox" name="removepunc">Remove punctuations<br>
+            <input type="checkbox" name="fullcaps">UpperCase<br>
+            <input type="checkbox" name="newlineremover">New Line Remover<br>
+            <input type="checkbox" name="extrespaceremover">Extra Spaces Remover<br>
+            <input type="checkbox" name="charactercounter">Character Count<br>
+            
+            <button type="submit">Analyze Text</button> 
+        </form>
+        {% comment %} <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> {% endcomment %}
+    </body>
+</html>
